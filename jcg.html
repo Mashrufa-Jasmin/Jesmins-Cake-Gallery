@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Jesmin's Cake Gallery</title> 
+  <link rel="stylesheet" href="styles.css"> 
+ <style type="text/css" id="dcoder_stylesheet">/* General styles for the website */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+/* Header Styles */
+header {
+    background-color: pink;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: white;
+}
+
+header #logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Hero Section Styles */
+#hero {
+    background-color: #ff8da1;
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+#hero h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#hero .btn {
+    background-color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #ff8da1;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#hero .btn:hover {
+    background-color: #ff6079;
+}
+
+/* Cake Catalog Section */
+#catalog {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#catalog h2 {
+    font-size: 2.5em;
+    color: #ff8da1;
+}
+
+#catalog .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#catalog .gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Contact Section Styles */
+#contact {
+    background-color: #ff8da1;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+#contact a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Order Form Section */
+#order-form {
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#order-form h2 {
+    font-size: 2.5em;
+    color: #ff8da1;
+}
+
+#order-form form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#order-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+
+#order-form input, #order-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+#order-form button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    background-color: #ff8da1;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#order-form button:hover {
+    background-color: #ff6079;
+}</style></head> 
+ <body> <!-- Header with Logo --> 
+  <header> 
+   <img src="logo.png" alt="Jesmin's Cake Gallery Logo" id="logo"> 
+   <h1>Jesmin's Cake Gallery</h1> 
+  </header> <!-- Hero Section --> 
+  <section id="hero"> 
+   <h2>Delicious Cakes Delivered to Your Doorstep</h2> <a href="#catalog" class="btn">Order Now</a> 
+  </section> <!-- Cake Catalog --> 
+  <section id="catalog"> 
+   <h2>Our Cakes</h2> 
+   <div class="gallery"> 
+    <img src="cake1.jpg" alt="Cake 1"> 
+    <img src="cake2.jpg" alt="Cake 2"> 
+    <img src="cake3.jpg" alt="Cake 3"> <!-- Add more images here --> 
+   </div> 
+  </section> <!-- Contact Information --> 
+  <section id="contact"> 
+   <h2>Contact Us</h2> 
+   <p><strong>Phone:</strong> +880 1317275736 / +880 1317275541</p> 
+   <p><strong>Email:</strong> <a href="mailto:oreo.ibnat81@gmail.com">oreo.ibnat81@gmail.com</a></p> 
+   <p><strong>WhatsApp:</strong> <a href="https://wa.me/8801317275736">Chat on WhatsApp</a></p> 
+   <p><strong>Facebook:</strong> <a href="https://www.facebook.com/profile.php?id=61552069654860">Visit Facebook</a></p> 
+   <p><strong>Instagram:</strong> <a href="https://www.instagram.com/jasmins_cake_gallery">Visit Instagram</a></p> 
+  </section> <!-- Order Form --> 
+  <section id="order-form"> 
+   <h2>Place a Custom Order</h2> 
+   <form> <label>Name:</label> 
+    <input type="text" name="name" required> <label>Email:</label> 
+    <input type="email" name="email" required> <label>Phone Number:</label> 
+    <input type="tel" name="phone" required> <label>Order Details:</label> <textarea name="details" required></textarea> <button type="submit">Submit Order</button> 
+   </form> 
+  </section> <!-- Link to JavaScript File --> 
+  <script src="script.js"></script> 
+ 
+<script type="text/javascript" id="dcoder_script">// JavaScript for adding interactivity
+
+// Display a unique welcome pop-up when the page loads
+window.onload = function() {
+    // Create the overlay
+    const overlay = document.createElement('div');
+    overlay.id = 'overlay';
+    overlay.style.position = 'fixed';
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+    overlay.style.zIndex = '9999';
+
+    // Create the pop-up box
+    const modal = document.createElement('div');
+    modal.style.backgroundColor = '#fff';
+    modal.style.padding = '20px';
+    modal.style.borderRadius = '8px';
+    modal.style.textAlign = 'center';
+    modal.style.maxWidth = '80%';
+    modal.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+    modal.style.animation = 'fadeIn 1s ease-out';
+
+    // Create the welcome message
+    const message = document.createElement('h2');
+    message.innerText = "Welcome to Jasmin's Cake Gallery!";
+    message.style.marginBottom = '20px';
+    message.style.color = '#ff8da1';
+
+    // Create the close button
+    const closeButton = document.createElement('button');
+    closeButton.innerText = 'Close';
+    closeButton.style.padding = '10px 20px';
+    closeButton.style.backgroundColor = '#ff8da1';
+    closeButton.style.border = 'none';
+    closeButton.style.color = '#fff';
+    closeButton.style.fontSize = '1.2em';
+    closeButton.style.cursor = 'pointer';
+    closeButton.style.borderRadius = '5px';
+    closeButton.style.transition = 'background-color 0.3s';
+
+    // Close button hover effect
+    closeButton.onmouseover = function() {
+        closeButton.style.backgroundColor = '#ff6079';
+    };
+    closeButton.onmouseout = function() {
+        closeButton.style.backgroundColor = '#ff8da1';
+    };
+
+    // Add the message and button to the modal
+    modal.appendChild(message);
+    modal.appendChild(closeButton);
+
+    // Append the modal to the overlay
+    overlay.appendChild(modal);
+
+    // Append the overlay to the body
+    document.body.appendChild(overlay);
+
+    // Add event listener to the close button to hide the pop-up
+    closeButton.addEventListener('click', function() {
+        document.body.removeChild(overlay);
+    });
+};
+
+// Simple form validation for the custom order form
+document.querySelector('form').addEventListener('submit', function(e) {
+    const name = document.querySelector('input[name="name"]').value;
+    if (!name) {
+        alert("Please enter your name.");
+        e.preventDefault();  // Prevent the form from being submitted
+    }
+});</script></body></html>
